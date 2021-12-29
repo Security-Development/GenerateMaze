@@ -34,12 +34,11 @@ def addInterval(type, y, x):
             array[(y-1) - (i)][x] = '■ '
 
 def generateMaze():
-    global array, interval
+    global array
     for y in range(size):
         for x in range(size):
             if x % 3 == 0 and y % 3 == 0 and x < (size - 3) and y < (size - 3):
                 rand = randint(1,3)
-                #print(f'x => {x}, y => {y}\n')
                 addInterval(rand, y, x)
                     
 
